@@ -1,5 +1,18 @@
 .wrapper-page-profil {
     .wrapper-header-profil {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 1px;
+            background-color: #d3d3d3;
+        }
+        
         .wrapper-avatar-profil, .wrapper-info-user, .wrapper-competences-user {
             display: inline-block;
             vertical-align: top;
@@ -43,6 +56,7 @@
         .wrapper-competences-user {
             .wrapper-badge-competences-user {
                 display: inline-block;
+                margin-right: 15px;
             } // badge-competences-user
         } // wrapper-competences-user
     

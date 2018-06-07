@@ -3,7 +3,7 @@ import React from 'react';
 
 import axios from 'axios';
 
-import { Button, Icon, Badge, Avatar } from '@material-ui/core/';
+import { Button, Icon, Badge, Avatar, CircularProgress } from '@material-ui/core/';
 
 class PageProfil extends React.Component {
   constructor() {
@@ -29,13 +29,21 @@ class PageProfil extends React.Component {
 
             <div className="wrapper-competences-user">
                 <div className="wrapper-badge-competences-user">
-                    <Avatar className="badge-competences-user">3</Avatar>
+                    <span>3</span>
+                    <CircularProgress variant="static" value={90} className="badge-competences-user" />
                 </div>
                 <div className="wrapper-badge-competences-user">
-                    <Avatar className="badge-competences-user">3</Avatar>
+                    <span>3</span>
+                    <CircularProgress variant="static" value={50} className="badge-competences-user" />
                 </div>
                 <div className="wrapper-badge-competences-user">
-                    <Avatar className="badge-competences-user">3</Avatar>
+                    <span>3</span>
+                    <CircularProgress variant="static" value={60} className="badge-competences-user" />
+                </div>
+
+                <div>
+                    <p>Bio: </p>
+                    <p>Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem</p>
                 </div>
             </div>
 
