@@ -9,51 +9,60 @@ const mockUsers = [
     name: 'Frank',
     firstName: 'Allo',
     imgUrl: '#',
-    job: 'Développeur'
+    job: 'Développeur',
+    status: 'Résident'
   },
   {
     name: 'Paulo',
     firstName: 'Hibou',
     imgUrl: '#',
-    job: 'Graphiste'
+    job: 'Graphiste',
+    status: 'Résident'
   },
   {
     name: 'Paulo',
     firstName: 'Hibou',
     imgUrl: '#',
-    job: 'Graphiste'
+    job: 'Graphiste',
+    status: 'Résident'
   },
   {
     name: 'Paulo',
     firstName: 'Hibou',
     imgUrl: '#',
-    job: 'Graphiste'
+    job: 'Graphiste',
+    status: 'Résident'
   },
   {
     name: 'Frank',
     firstName: 'Allo',
     imgUrl: '#',
-    job: 'Développeur'
+    job: 'Développeur',
+    status: 'Résident'
   },
   {
     name: 'Paulo',
     firstName: 'Hibou',
     imgUrl: '#',
-    job: 'Graphiste'
+    job: 'Graphiste',
+    status: 'Résident'
   },
   {
     name: 'Paulo',
     firstName: 'Hibou',
     imgUrl: '#',
-    job: 'Graphiste'
+    job: 'Graphiste',
+    status: 'Résident'
   },
   {
     name: 'Paulo',
     firstName: 'Hibou',
     imgUrl: '#',
-    job: 'Graphiste'
+    job: 'Graphiste',
+    status: 'Résident'
   }
 ];
+
 class ListUsers extends React.Component {
   constructor() {
     super();
@@ -85,7 +94,7 @@ class ListUsers extends React.Component {
           <li key={i}>
             <Card>
               <CardContent>
-                <Avatar alt={`${user.firstName} ${user.name}`} src={user.imgUrl} />
+                <Avatar className='avatar'>HP</Avatar>
                 <p className="name">
                   {user.firstName} {user.name}
                 </p>
