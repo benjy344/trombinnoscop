@@ -5,6 +5,9 @@ import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import axios from 'axios'
+import Path from './../../constants'
+import '../../styles/_formulaire.scss';
+
 
 const styles = theme => ({
   container: {
@@ -35,8 +38,8 @@ const styles = theme => ({
 
 const currencies = [
     {
-        value: 'Résident',
-        label: 'Résident',
+        value: 'Resident',
+        label: 'Resident',
     },
     {
         value: 'Nomades',
@@ -64,22 +67,19 @@ class TextFields extends React.Component {
     }
     
     sendInformations(){
-        console.log('okay')
-        axios.post('/profiles', {
-            params: {
-                name: this.state.lastName,
-                firstname:this.state.firstName,
-                password: this.state.password,
-                status: this.state.statut,
-                email: this.state.email,
-                phone: this.state.phoneNumber,
-                job: this.state.job,
-                portfolioLink: this.state.portfolio,
-                fbLink: this.state.fb,
-                tweeterLink:this.state.twitter,
-                instaLink:this.state.insta,
-                jobStatus:this.state.jobStatus,
-            }
+        axios.post(Path.createProfile, {
+            name: this.state.lastName,
+            firstname:this.state.firstName,
+            password: this.state.password,
+            status: this.state.statut,
+            email: this.state.email,
+            phone: this.state.phoneNumber,
+            job: this.state.job,
+            portfolioLink: this.state.portfolio,
+            fbLink: this.state.fb,
+            tweeterLink:this.state.twitter,
+            instaLink:this.state.insta,
+            jobStatus:this.state.jobStatus,
         })
         .then(function (response) {
             console.log(response);
@@ -87,6 +87,8 @@ class TextFields extends React.Component {
         .catch(function (error) {
             console.log(error);
         });
+
+        this.props.close()
     }
 
     handleChange(name, event){
@@ -121,7 +123,7 @@ class TextFields extends React.Component {
                 label="Password"
                 className={classes.textField}
                 onChange={(e) => this.handleChange("password", e)}          
-                type="Mot de passe"
+                type="Password"
                 autoComplete="current-password"
                 margin="normal"
             />

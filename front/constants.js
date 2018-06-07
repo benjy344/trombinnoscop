@@ -1,1 +1,7 @@
-export const envServer = 'http://localhost:3000';
+const baseServerUrl = 'http://localhost:3001'
+
+const Path = {
+    createProfile: baseServerUrl+'/profiles'
+}
+
+export default Path
