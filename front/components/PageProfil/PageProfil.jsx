@@ -11,6 +11,7 @@ class PageProfil extends React.Component {
   }
 
   render() {
+      const { close } = this.props
     return (
         <main className="wrapper-page-profil">
             <div className="wrapper-header-profil">
@@ -47,7 +48,7 @@ class PageProfil extends React.Component {
                     </div>
                 </div>
 
-                <button className="btn-close"></button>
+                <button className="btn-close" onClick={() => close()}></button>
             </div>
 
             <div className="wrapper-body-profil">

@@ -1,8 +1,6 @@
 import React      from 'react';
-import axios      from 'axios';
 import ListUser   from '../ListUsers/ListUsers';
 import Menu       from '../Menu/Menu';
-import PageProfil from '../PageProfil/PageProfil'
 import SearchBar  from '../SearchBar/SearchBar'
 import FormulaireContainer from '../Inscription/FormulaireContainer';
 
@@ -21,7 +19,6 @@ class Home extends React.Component {
           <SearchBar />
           <ListUser />
         </main>
-        <PageProfil />
         <FormulaireContainer/>
       </div>
     );
