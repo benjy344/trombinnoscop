@@ -53,7 +53,77 @@ const ProfileController = {
         return reply(response([profiles], null, 200)).code(200)
       }
     })
+  },
+
+  getOne (req, reply) {
+    const id = Mongoose.Types.ObjectId(req.params.id)
+
+    Profile.find({_id: id}, (err, profile) => {
+      if (err) {
+        console.log('error get profile id ' + id, err)
+        return reply(response([], 'error get profile id ' + id, 503)).code(503)
+      }
+      if (profile) {
+        return reply(response([profile], null, 200)).code(200)
+      }
+    })
+  },
+
+  update (req, reply) {
+    const id = Mongoose.Types.ObjectId(req.params.id)
+
+    Profile.findOneAndUpdate(
+      {_id: id},
+      {
+        $set: {
+          name         : payload.name,
+          firstname    : payload.firstname,
+          password     : payload.password,
+          status       : payload.status,
+          imgUrl       : payload.imgUrl,
+          email        : payload.email,
+          phone        : payload.phone,
+          job          : payload.job,
+          badges       : payload.badges,
+          level        : payload.level,
+          nextLevelExp : payload.nextLevelExp,
+          exp          : payload.exp,
+          mood         : payload.mood,
+          skills       : payload.skills,
+          portfolioLink: payload.portfolioLink,
+          fbLink       : payload.fbLink,
+          tweeterLink  : payload.tweeterLink,
+          instaLink    : payload.instaLink,
+          jobStatus    : payload.jobStatus,
+          availability : payload.availability
+        }
+      }, {new: true})
+      .then((updatedProfile, err) => {
+        if (err) {
+          console.log('error update user', err)
+          return reply(response([], 'error update user', 503)).code(503)
+        }
+
+        return reply(response([updatedProfile], null, 200)).code(200)
+      })
+  },
+
+  deleteOne (req, reply) {
+    const id = Mongoose.Types.ObjectId(req.params.id)
+
+    Profile.remove({_id: id}, (err) => {
+      if (err) {
+        const msg = `Can't remove Profile id: ${id}`
+        console.log(msg)
+        console.log(err)
+        reply(response([], msg, 503)).code(503)
+      }
+      else {
+        reply(response([], null, 200)).code(200)
+      }
+    })
   }
+
 }
 
 export default ProfileController

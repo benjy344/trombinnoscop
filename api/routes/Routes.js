@@ -62,6 +62,92 @@ module.exports = server => {
     })
 
     /*
+    * /profiles/{id}
+    * method: GET
+    * Get profile by ID
+    * */
+    server.route({
+      method: 'GET',
+      path  : Paths.profiles.getOne,
+      config: {
+        auth       : false,
+        description: 'Get profile by ID',
+        tags       : ['api'],
+        /*validate   : {
+          params   : {},
+          failAction: (request, reply, source, error) => {
+            console.log(error.data.details[0].message)
+            reply(response(null, error.data.details[0].message, 400)).code(400)
+          }
+        },*/
+        handler    : Controllers.Profile.getOne
+      }
+    })
+
+    /*
+    * /profiles/{id}
+    * method: DELETE
+    * Delete profile by ID
+    * */
+    server.route({
+      method: 'DELETE',
+      path  : Paths.profiles.deleteOne,
+      config: {
+        auth       : false,
+        description: 'Delete profile by ID',
+        tags       : ['api'],
+        /*validate   : {
+          params   : {},
+          failAction: (request, reply, source, error) => {
+            console.log(error.data.details[0].message)
+            reply(response(null, error.data.details[0].message, 400)).code(400)
+          }
+        },*/
+        handler    : Controllers.Profile.deleteOne
+      }
+    })
+
+    /*
+    * /profiles/{id}
+    * method: PUT
+    * Update profile by ID
+    * */
+    server.route({
+      method: 'PUT',
+      path  : Paths.profiles.getOne,
+      config: {
+        auth       : false,
+        description: 'Update profile by ID',
+        tags       : ['api'],
+        validate   : {
+          payload   : {
+            name         : Joi.string().alphanum().required(),
+            firstname    : Joi.string().alphanum().required(),
+            password     : Joi.string().alphanum().required(),
+            status       : Joi.string().alphanum().required(),
+            email        : Joi.string().email().required(),
+            phone        : Joi.string().alphanum().optional().allow(''),
+            job          : Joi.string().alphanum().required(),
+            badges       : Joi.array().optional(),
+            mood         : Joi.string().alphanum().optional().allow(''),
+            skills       : Joi.array().optional(),
+            portfolioLink: Joi.string().alphanum().optional().allow(''),
+            fbLink       : Joi.string().alphanum().optional().allow(''),
+            tweeterLink  : Joi.string().alphanum().optional().allow(''),
+            instaLink    : Joi.string().alphanum().optional().allow(''),
+            jobStatus    : Joi.string().alphanum().optional().allow(''),
+            availability : Joi.string().alphanum().optional().allow('')
+          },
+          failAction: (request, reply, source, error) => {
+            console.log(error.data.details[0].message)
+            reply(response(null, error.data.details[0].message, 400)).code(400)
+          }
+        },
+        handler    : Controllers.Profile.update
+      }
+    })
+
+    /*
     * /profiles
     * method: POST
     * Create a profile
