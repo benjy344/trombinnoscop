@@ -7,17 +7,14 @@
         margin-bottom: 20px;
         font-size: 34px;
     }
-    .form{
-        width: 75%;
-        &>form{
-            justify-content: space-around;
-        }
-        .sendButton{
-            margin-top: 20px;
-            display: block;
-            width: 100%;
-            text-align: center;
-        }
+    &>*{
+        justify-content: center;
     }
     
+}
+.sendButton{
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+    text-align: center;
 }
