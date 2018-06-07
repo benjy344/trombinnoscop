@@ -3,6 +3,7 @@ import axios      from 'axios';
 import ListUser   from '../ListUsers/ListUsers';
 import Menu       from '../Menu/Menu';
 import PageProfil from '../PageProfil/PageProfil'
+import SearchBar  from '../SearchBar/SearchBar'
 
 class Home extends React.Component {
   constructor() {
@@ -16,6 +17,7 @@ class Home extends React.Component {
       <div>
         <Menu />
         <main>
+          <SearchBar />
           <ListUser />
         </main>
         <PageProfil />

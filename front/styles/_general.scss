@@ -26,3 +26,17 @@ a {
 a, button, input[type="submit"] {
   cursor: pointer;
 }
+
+.col-6 {
+  width: 44%;
+  display: inline-block;
+  margin: 2% 2% 2% 2%;
+
+  /** > div {
+    height: 100px;
+  }*/
+}
+
+.block {
+  margin: 5px;
+}

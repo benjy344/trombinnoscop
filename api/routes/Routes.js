@@ -121,22 +121,22 @@ module.exports = server => {
         tags       : ['api'],
         validate   : {
           payload   : {
-            name         : Joi.string().alphanum().required(),
-            firstname    : Joi.string().alphanum().required(),
-            password     : Joi.string().alphanum().required(),
-            status       : Joi.string().alphanum().required(),
+            name         : Joi.string().required(),
+            firstname    : Joi.string().required(),
+            password     : Joi.string().required(),
+            status       : Joi.string().required(),
             email        : Joi.string().email().required(),
             phone        : Joi.string().alphanum().optional().allow(''),
-            job          : Joi.string().alphanum().required(),
+            job          : Joi.string().required(),
             badges       : Joi.array().optional(),
-            mood         : Joi.string().alphanum().optional().allow(''),
+            mood         : Joi.string().optional().allow(''),
             skills       : Joi.array().optional(),
-            portfolioLink: Joi.string().alphanum().optional().allow(''),
-            fbLink       : Joi.string().alphanum().optional().allow(''),
-            tweeterLink  : Joi.string().alphanum().optional().allow(''),
-            instaLink    : Joi.string().alphanum().optional().allow(''),
-            jobStatus    : Joi.string().alphanum().optional().allow(''),
-            availability : Joi.string().alphanum().optional().allow('')
+            portfolioLink: Joi.string().optional().allow(''),
+            fbLink       : Joi.string().optional().allow(''),
+            tweeterLink  : Joi.string().optional().allow(''),
+            instaLink    : Joi.string().optional().allow(''),
+            jobStatus    : Joi.string().optional().allow(''),
+            availability : Joi.string().optional().allow('')
           },
           failAction: (request, reply, source, error) => {
             console.log(error.data.details[0].message)
