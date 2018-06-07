@@ -1,0 +1,1 @@
+export const envServer = 'http://localhost:3000';
