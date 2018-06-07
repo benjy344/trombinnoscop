@@ -43,7 +43,7 @@ class PageProfil extends React.Component {
 
                     <div className="wrapper-bio-user">
                         <p>Bio: </p>
-                        <p className="text-bio-user">Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem</p>
+                        <p className="text-bio-user">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus interdum gravida libero non rhoncus. Integer rhoncus sit amet odio quis vestibulum. Aenean et lectus porttitor, imperdiet elit vitae, pretium nisi. Fusce id tortor nibh. Suspendisse sed dui ac sapien condimentum hendrerit id accumsan libero. Nunc fringilla, lacus et ullamcorper elementum, metus erat venenatis purus, non egestas est odio ac turpis. Cras sed euismod quam, at lobortis orci. Vestibulum quis mi ut metus scelerisque pretium in ut sem. Sed quis mi ullamcorper, aliquet purus vitae, blandit purus. Duis suscipit scelerisque augue, nec egestas nisl ultrices non.</p>
                     </div>
                 </div>
 

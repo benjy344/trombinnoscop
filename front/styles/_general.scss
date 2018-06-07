@@ -26,7 +26,10 @@ a {
 a, button, input[type="submit"] {
   cursor: pointer;
 }
-
+nav {
+  overflow: hidden;
+  width: 600px;
+}
 .col-6 {
   width: 44%;
   display: inline-block;
@@ -39,4 +42,8 @@ a, button, input[type="submit"] {
 
 .block {
   margin: 5px;
+
+  span {
+    margin-right: 10px
+  }
 }
