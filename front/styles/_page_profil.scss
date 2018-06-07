@@ -1,0 +1,81 @@
+.wrapper-page-profil {
+    .wrapper-header-profil {
+        .wrapper-avatar-profil, .wrapper-info-user, .wrapper-competences-user {
+            display: inline-block;
+            vertical-align: top;
+            margin: 20px;
+        }
+
+        .wrapper-avatar-profil {
+            .avatarProfil {
+                width: 200px;
+                height: 200px;
+                font-size: 60px;
+                background-color: coral;
+            } // avatarProfil
+        }
+    
+        .wrapper-info-user {
+            h2, p {
+                margin-top: 5px;
+            }
+
+            .nomProfil {
+                font-size: 26px;
+            } // nomProfil
+        
+            .metierProfil, .entrepriseProfil {
+                font-size: 20px;
+                font-weight: bold;
+            }
+    
+            .mailProfil, .numberProfil, .siteWebProfil {
+                font-size: 16px;
+            }
+    
+            .siteWebProfil {
+                a {
+                    text-decoration: underline;
+                }
+            }
+        } // wrapper-info-user
+
+        .wrapper-competences-user {
+            .wrapper-badge-competences-user {
+                display: inline-block;
+            } // badge-competences-user
+        } // wrapper-competences-user
+    
+        .btn-close {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            width: 20px;
+            height: 20px;
+            padding: 0;
+            background-color: transparent;
+    
+            &::before {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 2px;
+                top: 0;
+                left: 0;
+                background-color: #000;
+                transform: rotate(45deg);
+            }
+    
+            &::after {
+                content: '';
+                position: absolute;
+                width: 20px;
+                height: 2px;
+                top: 0;
+                left: 0;
+                background-color: #000;
+                transform: rotate(-45deg);
+            }
+        } // btn-close
+    } // wrapper-header-profil
+} // wrapper-page-profil
