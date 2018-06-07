@@ -147,3 +147,23 @@ a {
 
 a, button, input[type="submit"] {
   cursor: pointer; }
+.listUsers {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%; }
+  .listUsers li {
+    width: 20%;
+    margin: 0 2% 2% 2%;
+    text-align: center; }
+  .listUsers .name {
+    font-weight: bold;
+    margin-bottom: 10px; }
+  .listUsers .job {
+    margin-bottom: 10px; }
+.menu {
+  display: flex;
+  flex-direction: row; }
+  .menu ul {
+    display: flex;
+    flex-direction: row; }
