@@ -1,9 +1,27 @@
 .menu {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #232323;
+  color: #fff;
+  padding: 15px;
 
+  h1 {
+    font-size: 1.3rem;
+  }
   ul {
     display: flex;
     flex-direction: row;
+
+    li {
+      padding: 0 4%;
+      width: 100%;
+
+      a {
+        display: block;
+        width: 100%;
+      }
+    }
   }
 }
