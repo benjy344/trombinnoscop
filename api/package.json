@@ -2,7 +2,7 @@
   "name": "api",
   "version": "1.0.0",
   "description": "Api for Trombi",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js --exec babel-node --presets es2015",
     "start": "babel-node --presets es2015 server.js"
